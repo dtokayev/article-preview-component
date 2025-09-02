@@ -99,9 +99,14 @@ button {
   height: 2.5em;
   position: relative;
   z-index: 1000;
+  cursor: pointer;
 }
 
-.share-menu {
+button > svg {
+  color: var(--desaturated-dark-blue);
+}
+
+#share-menu {
   position: absolute;
   z-index: 999;
   top: -1em;
@@ -114,10 +119,6 @@ button {
   background: var(--very-dark-grayish-blue);
   padding: 0 2em .5em 2em;
   letter-spacing: .3em;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 1em;
   display: none;
 }
 
@@ -126,7 +127,27 @@ button {
 }
 
 .menu-active {
-  display: flex;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+}
+
+.menu-active a:nth-child(2),
+.menu-active a:nth-child(4) {
+  height: 20px;
+}
+
+.menu-active a:nth-child(3) {
+  height: 17px;
+}
+
+.button-active {
+  background-color: var(--desaturated-dark-blue);
+}
+
+.button-active > svg {
+  color: var(--light-grayish-blue);
 }
 
 @media only screen and (min-width: 800px) {

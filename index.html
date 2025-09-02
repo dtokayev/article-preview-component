@@ -10,6 +10,7 @@
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
+  <script src="main.js" defer></script>
 </head>
 <body>
   <main>
@@ -29,12 +30,14 @@
             <img src="./images/avatar-michelle.jpg" alt="">
             <span class="profile-name">Michelle Appleton</span>
             <span class="date">28 Jun 2020</span>
-            <button type="button"><img src="./images/icon-share.svg" alt="share"></button>
-            <div class="share-menu">
+            <button type="button" id="share-button">
+              <svg width="15" height="13"><path fill="currentColor" d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"/></svg>
+            </button>
+            <div id="share-menu">
               <span class="share-text">Share</span>
-              <img src="./images/icon-facebook.svg" alt="facebook">
-              <img src="./images/icon-twitter.svg" alt="twitter">
-              <img src="./images/icon-pinterest.svg" alt="pinterest">
+              <a href="#"><img src="./images/icon-facebook.svg" alt="facebook"></a>
+              <a href="#"><img src="./images/icon-twitter.svg" alt="twitter"></a>
+              <a href="#"><img src="./images/icon-pinterest.svg" alt="pinterest"></a>
             </div>
           </div>
         </div>
