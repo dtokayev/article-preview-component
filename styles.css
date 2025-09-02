@@ -12,29 +12,33 @@ body {
 }
 
 main {
-  padding: 4em 1.4em;
+  padding: 0 1.4em;
   background-color: var(--light-grayish-blue);
-  min-height: 100vh;
+  min-height: max(600px, 100vh);
   font-family: "Manrope", sans-serif;
+  display: flex;
+  align-items: center;
 }
 
 .grid-container {
   display: grid;
   margin: 0 auto;
   font-weight: 500;
+  max-width: 500px;
+  padding: 2em 0;
 }
 
 .card {
   display: grid;
   box-shadow: 0 2em 2em rgba(0, 0, 0, .1);
-  border-radius: 0 0 12px 12px;
+  border-radius: 12px 12px 12px 12px;
 }
 
 .image {
   background: url("./images/drawers.jpg") 50% 30%;
   background-size: cover;
   border-radius: 12px 12px 0 0;
-  height: 200px;
+  height: max(200px, 40vw);
 }
 
 .article-description {
@@ -45,7 +49,7 @@ main {
 
 .title {
   color: var(--very-dark-grayish-blue);
-  font-size: 1.03em;
+  font-size: clamp(1.03em, 3vw, 1.3em);
   font-weight: 700;
   line-height: 1.5em;
 }
@@ -92,4 +96,35 @@ button {
   border: none;
   width: 2.5em;
   height: 2.5em;
+}
+
+@media only screen and (min-width: 800px) {
+  .grid-container {
+    max-width: 730px;
+  }
+
+  .card {
+    grid-template-columns: 1.25fr 2fr;
+  }
+
+  .image {
+    grid-column: 1;
+    height: 100%;
+    background-position-x: 10%;
+    border-radius: 12px 0 0 12px;
+  }
+
+  .article-description {
+    grid-column: 2;
+    border-radius: 0 12px 12px 0;
+    padding: 1em 2.5em;
+  }
+
+  .description {
+    margin-bottom: 1.5em;
+  }
+
+  .profile {
+    margin-bottom: 1em;
+  }
 }
