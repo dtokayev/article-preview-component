@@ -67,6 +67,7 @@ main {
   gap: 0 1em;
   align-content: center;
   align-items: center;
+  position: relative;
 }
 
 .profile > img {
@@ -96,6 +97,36 @@ button {
   border: none;
   width: 2.5em;
   height: 2.5em;
+  position: relative;
+  z-index: 1000;
+}
+
+.share-menu {
+  position: absolute;
+  z-index: 999;
+  top: -1em;
+  left: -2em;
+  width: calc(100%);
+  height: calc(100% + 2em);
+  border-radius: 0 0 12px 12px;
+  text-transform: uppercase;
+  color: var(--grayish-blue);
+  background: var(--very-dark-grayish-blue);
+  padding: 0 2em .5em 2em;
+  letter-spacing: .3em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1em;
+  display: none;
+}
+
+.share-text {
+  font-size: .9em;
+}
+
+.menu-active {
+  display: flex;
 }
 
 @media only screen and (min-width: 800px) {
