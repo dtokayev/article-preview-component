@@ -179,4 +179,25 @@ button > svg {
   .profile {
     margin-bottom: 1em;
   }
+
+  #share-menu {
+    width: unset;
+    height: unset;
+    top: -4.5em;
+    left: unset;
+    right: calc(-50% + 5em);
+    border-radius: 12px;
+    padding: 1em 2em;
+  }
+
+  #share-menu::after {
+    background: var(--very-dark-grayish-blue);
+    height: 1em;
+    width: 1em;
+    content: '';
+    position: absolute;
+    bottom: -.5em;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
 }
