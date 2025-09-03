@@ -102,6 +102,10 @@ button {
   cursor: pointer;
 }
 
+button:hover {
+  background-color: var(--grayish-blue);
+}
+
 button > svg {
   color: var(--desaturated-dark-blue);
 }
@@ -131,6 +135,7 @@ button > svg {
   align-items: center;
   justify-content: flex-start;
   gap: 1em;
+  animation: .5s slide-up 1;
 }
 
 .menu-active a:nth-child(2),
@@ -148,6 +153,18 @@ button > svg {
 
 .button-active > svg {
   color: var(--light-grayish-blue);
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(20%);
+    opacity: .2;
+  }
+
+  to {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 
 @media only screen and (min-width: 800px) {
