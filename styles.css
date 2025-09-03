@@ -218,3 +218,9 @@ button > svg {
     transform: translateX(-50%) rotate(45deg);
   }
 }
+
+@media (prefers-reduced-motion) {
+  .menu-active {
+    animation: none;
+  }
+}
